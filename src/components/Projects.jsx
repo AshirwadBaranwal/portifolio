@@ -16,7 +16,8 @@ export default function MyWork() {
   const projects = [
     {
       title: "Grocify (Grocery Store)",
-      imageUrl: "/Project_G.png",
+      imageUrl:
+        "https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1tkcw1ifo07pm5ofyzch1",
       date: "2025",
       description:
         " A webiste with admin panel where user can buy groceries online.",
@@ -26,7 +27,7 @@ export default function MyWork() {
     },
     {
       title: "HostelHive(Hostel/PG Finder)",
-      imageUrl: "/Project_H.png",
+      imageUrl: "https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1tkdl1i8m07pl6jws4wt9",
       date: "2024",
       description:
         "Built in collaboration with another developer to help students find hostels and PGs, with features like secure login, search filters, and real-time listings using MERN.",
@@ -45,7 +46,8 @@ export default function MyWork() {
     },
     {
       title: "KrishanuClasses (Online Classes)",
-      imageUrl: "/Project_K.png",
+      imageUrl:
+        "https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1tkgk1i8s07plnxx94fcz",
       date: "2023",
       description:
         "An edtech platform with beautiful ui design with test system and performence dashboard.Still in progress.",
@@ -55,7 +57,7 @@ export default function MyWork() {
     },
     {
       title: "BCAGUIDE360",
-      imageUrl: "/Project_B.png",
+      imageUrl: "https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1tkgf1ifu07pmfd8stp46",
       date: "2023",
       description:
         "A website for BCA students providing Book Library, Coding Ques, PYQs and notes.",
@@ -66,7 +68,7 @@ export default function MyWork() {
 
     {
       title: "Traver(Travel)",
-      imageUrl: "/Project_T.png",
+      imageUrl: "https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1tkcy1i8h07plukabsjr1",
       date: "2023",
       description:
         "A travelling webiste showcasing frontend skill in react js using tailwind.",

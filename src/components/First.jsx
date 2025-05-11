@@ -13,11 +13,11 @@ export default function First() {
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center opacity-5 z-0">
         <Image
-          src="/backgroundweb.webp" // Replace with actual image path
+          src="/backgroundweb.webp"
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          className=" mix-blend-difference"
+          fill
+          sizes="100vw"
+          className="object-cover mix-blend-difference"
         />
       </div>
 
@@ -31,9 +31,10 @@ export default function First() {
           <div className="md:absolute w-[320px] h-[320px] md:w-[35vw] md:h-[35vw] bg-gray-600 rounded-[50%_50%_50%_50%/60%_60%_40%_40%] rotate-45 z-1 overflow-hidden  ">
             <div className="relative w-[120%] h-[120%] mt-10 ">
               <Image
-                src="/profile.png"
+                src="https://ap-south-1.graphassets.com/cmahtuzc10bci07pk64gx96gm/cmaj1kyjv1i5p07plzsd27dgc"
                 alt="Profile"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover -rotate-45"
               />
             </div>
