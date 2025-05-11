@@ -1,103 +1,69 @@
-import Image from "next/image";
+"use client";
+import ContactForm from "@/components/Contact";
+import First from "@/components/First";
+import MyWork from "@/components/Projects";
+import Second from "@/components/Second";
+import Link from "next/link";
+import { GrAd } from "react-icons/gr";
+import Sidebar from "@/components/Sidebar";
+import { useOnlineStatus } from "@/hooks/useOnlineStatus";
+import OfflineOverlay from "@/components/OfflineOverlay";
+import Education from "@/components/Education";
+import { FaDownload } from "react-icons/fa6";
 
 export default function Home() {
+  const isOnline = useOnlineStatus();
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {!isOnline && <OfflineOverlay />}
+      <div className="max-w-screen-2xl mx-auto bg-black text-white font-sans relative overflow-hidden">
+        <header className="fixed w-full top-0 flex justify-between items-center px-4 md:px-16 py-6 z-90 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 ">
+          <div className="flex items-center text-lg font-bold tracking-wider  gap-2">
+            <GrAd color="white" />
+            <span className="text-white uppercase">Ashirwad</span>
+            <span className="text-gray-400 uppercase">Kumar</span>
+          </div>
+          <nav className="hidden md:flex gap-8 text-sm text-gray-300 items-center">
+            <Link href="#education" className="hover:text-white">
+              EDUCATION
+            </Link>
+            <Link href="#skills" className="hover:text-white">
+              SKILLS
+            </Link>
+            <Link href="#my-work" className="hover:text-white">
+              MY WORK
+            </Link>
+            <Link href="#contact" className="hover:text-white">
+              CONTACT
+            </Link>
+            <Link
+              href="https://drive.google.com/uc?export=download&id=1OKSnmVkBv36APCE5Z_Ns2jSy2fhV4mdm"
+              className="hover:text-white border border-gray-300 rounded-md px-4 py-1 flex items-center gap-1"
+            >
+              <FaDownload />
+              Resume
+            </Link>
+          </nav>
+          <div className=" md:hidden ">
+            <Sidebar />
+          </div>
+        </header>
+        <div id="#">
+          <First />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div id="education">
+          <Education />
+        </div>
+        <div id="skills" className="pt-8">
+          <Second />
+        </div>
+        <div id="my-work" className="pt-5">
+          <MyWork />
+        </div>
+        <div id="contact">
+          <ContactForm />
+        </div>
+      </div>
+    </>
   );
 }
