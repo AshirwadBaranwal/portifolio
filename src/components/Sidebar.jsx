@@ -45,6 +45,12 @@ const Sidebar = () => {
             Projects
           </Link>
           <Link
+            href="#certifications"
+            className="text-lg font-medium text-gray-200 hover:text-white transition-all duration-300"
+          >
+            Certifications
+          </Link>
+          <Link
             href="#contact"
             className="text-lg font-medium text-gray-200 hover:text-white transition-all duration-300"
           >

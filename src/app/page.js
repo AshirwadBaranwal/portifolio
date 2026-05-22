@@ -3,6 +3,8 @@ import ContactForm from "@/components/Contact";
 import First from "@/components/First";
 import MyWork from "@/components/Projects";
 import Second from "@/components/Second";
+import Certifications from "@/components/Certifications";
+import Gallery from "@/components/Gallery";
 import Link from "next/link";
 import { GrAd } from "react-icons/gr";
 import Sidebar from "@/components/Sidebar";
@@ -33,6 +35,9 @@ export default function Home() {
             <Link href="#my-work" className="hover:text-white">
               MY WORK
             </Link>
+            <Link href="#certifications" className="hover:text-white">
+              CERTIFICATIONS
+            </Link>
             <Link href="#contact" className="hover:text-white">
               CONTACT
             </Link>
@@ -59,6 +64,12 @@ export default function Home() {
         </div>
         <div id="my-work" className="pt-5">
           <MyWork />
+        </div>
+        <div id="certifications">
+          <Certifications />
+        </div>
+        <div id="gallery">
+          <Gallery />
         </div>
         <div id="contact">
           <ContactForm />
